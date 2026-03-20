@@ -1,6 +1,6 @@
 from typing import List
-from task import Task
-from protocol import TaskSource
+from src.task import Task
+from src.protocol import TaskSource
 
 
 class TaskValidate:

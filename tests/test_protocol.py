@@ -1,6 +1,5 @@
-import pytest
-from protocol import TaskSource
-from sources import FileSource, GeneratorSource, APISource, IncorrectSource
+from src.protocol import TaskSource
+from src.sources import FileSource, GeneratorSource, APISource, IncorrectSource
 
 
 class TestProtocol:

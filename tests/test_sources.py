@@ -1,7 +1,6 @@
-import pytest
-from task import Task
-from sources import FileSource, GeneratorSource, APISource, IncorrectSource
-from protocol import TaskSource
+from src.task import Task
+from src.sources import FileSource, GeneratorSource, APISource, IncorrectSource
+from src.protocol import TaskSource
 
 
 class TestSources:

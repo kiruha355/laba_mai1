@@ -9,3 +9,20 @@ norecursedirs = "*.egg .eggs dist build .git __pycache__"
 [tool.coverage.run]
 source = ["."]
 omit = ["tests/*", ".venv/*"]
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = false
+warn_return_any = true
+warn_unused_configs = true
+check_untyped_defs = true
+exclude = [
+    "^tests/",
+]
+
+[[tool.mypy.overrides]]
+module = "pytest"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+ignore_errors = true

@@ -1,8 +1,8 @@
 import pytest
-from task import Task
-from protocol import TaskSource
-from validate import TaskValidate
-from sources import FileSource, GeneratorSource, APISource, IncorrectSource
+from src.task import Task
+from src.protocol import TaskSource
+from src.validate import TaskValidate
+from src.sources import FileSource, GeneratorSource, APISource, IncorrectSource
 
 
 class TestValidate:

@@ -1,6 +1,6 @@
-from validate import TaskValidate
-from sources import FileSource, GeneratorSource, APISource, IncorrectSource
-from protocol import TaskSource
+from src.validate import TaskValidate
+from src.sources import FileSource, GeneratorSource, APISource, IncorrectSource
+from src.protocol import TaskSource
 
 
 def main():

@@ -11,28 +11,28 @@
 
  <pre>
 laba_mai1/
-    ├── src/                              
+    ├── src/
     │   ├── __init__.py
-    │   ├── task.py                       
-    │   ├── protocol.py                  
-    │   ├── sources.py                   
-    │   ├── validate.py                   
-    │   └── main.py                       
+    │   ├── task.py
+    │   ├── protocol.py
+    │   ├── sources.py
+    │   ├── validate.py
+    │   └── main.py
     │
-    ├── tests/                            
+    ├── tests/
     │   ├── __init__.py
     │   ├── conftest.py
-    │   ├── test_protocol.py              
-    │   ├── test_sources.py               
-    │   └──test_validate.py              
+    │   ├── test_protocol.py
+    │   ├── test_sources.py
+    │   └──test_validate.py
     │
-    ├── .gitignore                        
-    ├── .pre-commit-config.yaml          
-    ├── pyproject.toml                    
-    ├── requirements.txt                 
-    ├── uv.lock                           
-    ├── README.md                         
-    └── report.pdf                       
+    ├── .gitignore
+    ├── .pre-commit-config.yaml
+    ├── pyproject.toml
+    ├── requirements.txt
+    ├── uv.lock
+    ├── README.md
+    └── report.pdf
 </pre>
 
 ## Источники задач
@@ -48,7 +48,7 @@ class FileSource:
 
     def get_tasks(self) -> list[Task]:
         return [Task(id=1, payload="meow1"), Task(id=2, payload="meow2")]
-```        
+```
 
 ### 2. GeneratorSource
 

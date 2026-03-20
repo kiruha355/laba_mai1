@@ -15,11 +15,9 @@ def main():
     for source in [file_source, gen_source, api_source, incor_source]:
         print(f"Подходит ли {source.__class__.__name__}:\n {isinstance(source, TaskSource)}")
 
-
     validator.add_source(file_source)
     validator.add_source(gen_source)
     validator.add_source(api_source)
-
 
     try:
         validator.add_source(incor_source)
@@ -31,6 +29,7 @@ def main():
     print("Список задач:")
     for task in tasks:
         print(f"{task.payload}")
+
 
 if __name__ == "__main__":
     main()

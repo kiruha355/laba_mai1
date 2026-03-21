@@ -17,6 +17,7 @@ laba_mai1/
     │   ├── protocol.py
     │   ├── sources.py
     │   ├── validate.py
+    │   ├── api_client.py
     │   └── main.py
     │
     ├── tests/

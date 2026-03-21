@@ -1,3 +1,5 @@
+import urllib.request
+import json
 from src.task import Task
 
 
@@ -23,15 +25,20 @@ class GeneratorSource:
         ]
 
 
+
 class APISource:
-    def __init__(self, url: str):
-        self.url = url
+    URL = "https://jsonplaceholder.typicode.com/todos"
+
+    def __init__(self, limit):
+        self.url = f"{self.URL}?_limit={limit}"
 
     def get_tasks(self) -> list[Task]:
+        with urllib.request.urlopen(self.url) as response:
+            raw: list[dict] = json.loads(response.read().decode())
+
         return [
-            Task(id=1, payload={"status": 200}),
-            Task(id=2, payload={"status": 505}),
-            Task(id=3, payload={"status": "not found", "code": 400}),
+            Task(id=item["id"], payload=item["title"])
+            for item in raw
         ]
 
 

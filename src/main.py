@@ -1,19 +1,25 @@
+import random
 from src.validate import TaskValidate
 from src.sources import FileSource, GeneratorSource, APISource, IncorrectSource
 from src.protocol import TaskSource
+from src.api_client import APIClient
 
 
 def main():
+    print("API Клиент:")
+    client = APIClient()
+    user = client.create_user()
+    tasks_from_api = client.get_tasks_for_user(user_id=1)
+
     validator = TaskValidate()
 
     file_source = FileSource("file.txt")
     gen_source = GeneratorSource(3)
-    api_source = APISource("https://google.com")
+    api_source = APISource(limit=client.task_limit)
     incor_source = IncorrectSource("sample")
 
-    print("Проверка соответствия контракту:")
     for source in [file_source, gen_source, api_source, incor_source]:
-        print(f"Подходит ли {source.__class__.__name__}:\n {isinstance(source, TaskSource)}")
+        print(f"Подходит ли {source.__class__.__name__}: {isinstance(source, TaskSource)}")
 
     validator.add_source(file_source)
     validator.add_source(gen_source)
@@ -28,7 +34,7 @@ def main():
 
     print("Список задач:")
     for task in tasks:
-        print(f"{task.payload}")
+        print(f"  [{task.id}] {task.payload}")
 
 
 if __name__ == "__main__":

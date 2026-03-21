@@ -9,7 +9,6 @@ def main():
     print("API Клиент:")
     client = APIClient()
     user = client.create_user()
-    tasks_from_api = client.get_tasks_for_user(user_id=1)
 
     validator = TaskValidate()
 

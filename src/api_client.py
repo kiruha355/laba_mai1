@@ -34,13 +34,3 @@ class APIClient:
             result = json.loads(response.read().decode("utf-8"))
             return result
 
-    def get_tasks_for_user(self, user_id: int) -> list[Task]:
-        """Получает случайное количество задач"""
-        url = f"{self.URL}/todos?userId={user_id}&_limit={self.task_limit}"
-
-        req = urllib.request.Request(url, headers={"User-Agent": "Google"})
-
-        with urllib.request.urlopen(req, timeout=5) as response:
-            raw: list[dict] = json.loads(response.read().decode("utf-8"))
-
-        return [Task(id=item["id"], payload=item["title"]) for item in raw]

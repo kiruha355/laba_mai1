@@ -4,6 +4,7 @@ from uuid import uuid4
 from .descriptors import PositiveInt, NotEmptyString
 from .errors import InvalidStatusError
 
+
 class Task:
     priority = PositiveInt()
     description = NotEmptyString()

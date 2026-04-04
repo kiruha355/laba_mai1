@@ -56,7 +56,6 @@ class TestPositiveInt:
             Task(description="test", priority=-5, payload=None)
 
 
-
 class TestNotEmptyString:
     def test_description_accepts_valid_string(self):
         task = Task(description="valid", priority=1, payload=None)
@@ -92,8 +91,6 @@ class TestStatus:
             task.status = "broken"
 
 
-
-
 class TestIsReady:
     def test_is_ready_true_when_pending_and_priority_5(self):
         task = Task(description="test", priority=5, payload=None)
@@ -111,7 +108,6 @@ class TestIsReady:
         task = Task(description="test", priority=5, payload=None)
         task.status = "running"
         assert task.is_ready is False
-
 
 
 class TestErrorHierarchy:

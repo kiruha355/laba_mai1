@@ -1,5 +1,6 @@
 from .errors import InvalidTypeError, InvalidValueError
 
+
 class PositiveInt:
     """Дескриптор проверки на положительное целое число."""
 

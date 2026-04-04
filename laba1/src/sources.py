@@ -1,6 +1,6 @@
 import urllib.request
 import json
-from src.task import Task
+from laba1.src.task import Task
 
 
 class FileSource:

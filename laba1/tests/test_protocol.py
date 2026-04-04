@@ -1,5 +1,5 @@
-from src.protocol import TaskSource
-from src.sources import FileSource, GeneratorSource, APISource, IncorrectSource
+from laba1.src import TaskSource
+from laba1.src import FileSource, GeneratorSource, APISource, IncorrectSource
 
 
 class TestProtocol:

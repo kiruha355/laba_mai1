@@ -1,8 +1,7 @@
-import random
-from src.validate import TaskValidate
-from src.sources import FileSource, GeneratorSource, APISource, IncorrectSource
-from src.protocol import TaskSource
-from src.api_client import APIClient
+from laba1.src.validate import TaskValidate
+from laba1.src.sources import FileSource, GeneratorSource, APISource, IncorrectSource
+from laba1.src.protocol import TaskSource
+from laba1.src.api_client import APIClient
 
 
 def main():

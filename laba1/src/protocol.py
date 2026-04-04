@@ -1,5 +1,5 @@
 from typing import Protocol, runtime_checkable
-from src.task import Task
+from laba1.src.task import Task
 
 
 @runtime_checkable

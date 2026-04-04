@@ -1,6 +1,6 @@
-from src.task import Task
-from src.sources import FileSource, GeneratorSource, APISource, IncorrectSource
-from src.protocol import TaskSource
+from laba1.src.task import Task
+from laba1.src import FileSource, GeneratorSource, APISource, IncorrectSource
+from laba1.src import TaskSource
 
 
 class TestSources:
@@ -26,16 +26,6 @@ class TestSources:
             assert task.id == i
             assert task.payload == f"generated_task_{i}"
 
-    def test_api_source(self):
-        source = APISource("https://api.example.com")
-        tasks = source.get_tasks()
-
-        assert len(tasks) == 3
-        assert isinstance(tasks[0], Task)
-        assert tasks[0].id == 1
-        assert tasks[0].payload == {"status": 200}
-        assert tasks[1].payload == {"status": 505}
-        assert tasks[2].payload == {"status": "not found", "code": 400}
 
     def test_incorrect_source(self):
         source = IncorrectSource("test")

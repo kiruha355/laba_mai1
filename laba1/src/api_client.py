@@ -2,7 +2,6 @@ import urllib.request
 import json
 import uuid
 import random
-from src.task import Task
 
 
 class APIClient:

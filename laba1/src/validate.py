@@ -1,6 +1,6 @@
 from typing import List
-from src.task import Task
-from src.protocol import TaskSource
+from laba1.src.task import Task
+from laba1.src.protocol import TaskSource
 
 
 class TaskValidate:
